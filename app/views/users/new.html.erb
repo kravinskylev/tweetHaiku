@@ -1,0 +1,9 @@
+<div class="container" class="pure-form">
+<%= form_for(@user) do |f| %>
+
+  <%= f.text_field :username, placeholder: "username" %> <br>
+  <%= f.password_field :password, placeholder: "password" %> <br>
+
+  <%= f.submit "Signup", class: "octicon octicon-arrow-down" %>
+<% end %>
+</div>

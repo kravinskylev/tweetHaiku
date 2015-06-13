@@ -1,0 +1,12 @@
+<div class="container" class="pure-form">
+  <%= form_for(:session, url: login_path) do |f| %>
+
+  <%= f.text_field :username, placeholder: "username" %> <br>
+  <%= f.password_field :password, placeholder: "password" %> <br>
+
+  <%= f.submit "Login", class: "octicon octicon-arrow-down" %>
+<% end %>
+</div>
+
+
+

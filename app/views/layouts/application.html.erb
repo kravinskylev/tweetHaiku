@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>tweetHaiku</title>
+  <link href='http://fonts.googleapis.com/css?family=Bad+Script|Marck+Script|Seaweed+Script|Dancing+Script' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.6.0/pure-min.css">
+  <link rel="stylesheet" href="/octicons/octicons.css">
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+
+
+<a href="/"><h1 class="tweethaiku">tweetHaiku</h1></a>
+
+  <h5>
+    <ul class="navbar" class="center-align">
+      <li class="nav-item"><a href="/about">About</a></li>
+      <li class="nav-item"><a href="/connect">Connect</a></li>
+
+      <% unless current_user %>
+        <li class="nav-item"><a href="/login">Login</a></li>
+      <% else %>
+        <li class="nav-item">
+        <%= link_to 'logout', logout_path, :method => :delete %>
+       </li>
+      <% end %>
+
+      <li class="nav-item"><a href="/users/new">Signup</a></li>
+    </ul>
+  </h5>
+
+  <div class="container">
+    <% flash.each do |name, msg| %>
+     <%= content_tag :div, msg, :id => "flash_#{name}" %>
+    <% end %>
+
+    <%= yield %>
+      <div class="push"></div>
+  </div>
+  <br>
+  <br>
+  <div class="footer">
+    <h4><span class="mega-octicon octicon-pencil"></span>  with <span class="octicon-mega octicon-heart"></span> by <a class="lk" style="color:#55ACEE;" href="http://lev.io">{l/k}</a></h4>
+  </div>
+
+</body>
+</html>

@@ -1,0 +1,9 @@
+<%= form_for(@haiku) do |f| %>
+  <%= f.label :title %>
+  <%= f.text_field :title %> <br>
+  <%= f.text_field :line1 %>
+  <%= f.text_field :line2 %>
+  <%= f.text_field :line3 %>
+  <%= f.text_field :author %>
+  <%= f.submit %>
+<% end %>

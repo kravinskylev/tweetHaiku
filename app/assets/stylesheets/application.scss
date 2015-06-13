@@ -1,0 +1,129 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the top of the
+ * compiled file, but it's generally better to create a new file per style scope.
+ *
+ *= require sprockets-octicons
+ *= require_tree .
+ *= require_self
+ */
+
+@import "materialize";
+@import "application.css";
+
+html {
+    background: url(paper.jpg) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    text-align: center;
+  }
+
+.tweethaiku {
+    font-family: 'Seaweed Script', cursive;
+    display: inline-block;
+    color: #55ACEE;
+  }
+
+
+ul .navbar {
+    list-style-type: none;
+    padding: 0;
+    margin:0;
+  }
+
+.navbar a:link {
+    display: inline-block;
+    width: 120px;
+    font-weight: bold;
+    padding: 4px;
+    text-decoration: none;
+    text-transform: lowercase;
+    text-color:white;
+  }
+
+li {
+    display: inline-block;
+    margin:0;
+    padding:0;
+    background-color: #55ACEE;
+  }
+
+.nav-item a:link , .nav-item a:visited, .nav-item a:active  {
+    text-decoration: none;
+    color: #FFFFFF ;
+  }
+
+.nav-item a:hover {
+    color: #fdfd96 ;
+  }
+
+a:hover {
+    color:#fdfd96;
+  }
+
+.create a:link {
+    color:#55ACEE;
+  }
+
+h4 {
+    color:#55ACEE;
+  }
+
+.lk:hover {
+  color:#fdfd96;
+}
+
+.icon {
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+
+.git {
+    padding: 10px;
+  }
+
+a {
+    color: #55ACEE;
+  }
+
+.octicon-arrow-small-up {
+    display:inline-block;
+  }
+* {
+    margin:0;
+  }
+
+html, body {
+    height:100%;
+  }
+.container {
+    min-height:100%;
+    height: auto;
+    height: 100%;
+    margin: 0 auto -22em;
+  }
+
+.footer, .push {
+    height: 22em;
+  }
+
+.navbar {
+    padding-bottom:5vh;
+  }
+
+.haiku-index {
+    text-align:left;
+    padding-left:35%;
+  }
+
+h6 {
+  font-style:italic;
+}
+$body-bg: transparent;

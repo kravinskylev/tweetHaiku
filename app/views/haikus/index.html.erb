@@ -1,0 +1,17 @@
+<div class="haiku-index">
+  <% @haikus.sort_by {|haiku| haiku.votes.count }.reverse.each do |haiku| %>
+    <div style="display: inline-block;">
+     <%= button_to "\u2B06", upvote_haiku_path(haiku), method: :post, class: "octicon octicon-arrow-small-up" %>
+    </div>
+    <span style="text-color:#55ACEE; font-size:175%;">
+      <%= haiku.votes.count %>
+     <%= link_to haiku.title, haiku_path(haiku) %>
+    </span>
+  <% if current_user && current_user[:role] == 1 %>
+   <%= link_to "New Haiku", new_haiku_path %>
+   <%= link_to "Edit", edit_haiku_path(haiku) %>
+   <%= link_to "Delete", haiku_path(haiku), method: :delete%>
+  <% end %>
+   <br>
+  <% end %>
+</div>
